@@ -1,0 +1,156 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MJB Connect — Single-File Site</title>
+<meta name="description" content="MJB Connect connects employers with qualified workers in minutes.">
+<style>
+  :root{--blue:#1F5F8D; --blue-mid:#3F83DB; --blue-light:#96C0F3; --gray-100:#F2F2F4; --gray-700:#2A2E39; --green:#19A974; --white:#FFFFFF;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,Helvetica,sans-serif;color:#0C1222;background:#FFFFFF;line-height:1.6}
+  a{color:var(--blue-mid);text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  header{position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid #e7e9ee;}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px;}
+  .brand .dot{background:var(--blue-mid); color:#fff; width:36px; height:36px; border-radius:10px; display:grid; place-items:center; font-weight:800}
+  .nav a{margin-left:18px; color:#263042; font-weight:600}
+  .btn{display:inline-block; padding:12px 18px; border-radius:10px; font-weight:700; border:2px solid transparent}
+  .btn.primary{background:var(--blue-mid); color:#fff}
+  .btn.secondary{background:#fff; color:var(--blue-mid); border-color:var(--blue-mid)}
+  .btn.green{background:var(--green); color:#fff}
+  .hero{background:linear-gradient(180deg, var(--blue) 0%, var(--blue-mid) 70%, var(--blue-light) 120%); color:#fff; padding:64px 0 48px;}
+  .hero h1{font-size: clamp(28px, 4vw, 54px); line-height:1.1; margin:0 0 14px}
+  .hero p{font-size: clamp(16px, 2.3vw, 20px); opacity:.95}
+  .hero .cta{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+  .badges{display:flex; gap:12px; margin-top:16px; flex-wrap:wrap}
+  .badge{background:#ffffff22; padding:6px 10px; border-radius:999px; border:1px solid #ffffff33; font-size:14px}
+  .panel{background:#fff; border:1px solid #e7e9ee; border-radius:16px; padding:22px}
+  .section{padding:56px 0}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .card{border:1px solid #e7e9ee; border-radius:14px; padding:20px}
+  .card h3{margin-top:0}
+  .muted{color:#58607a}
+  .how .step{display:flex; gap:14px; align-items:flex-start}
+  .how .num{flex:0 0 34px; height:34px; display:grid; place-items:center; border-radius:9px; background:var(--gray-100); color:#162033; font-weight:800}
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  .price{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .price .plan{border:2px solid #e7e9ee; border-radius:16px; padding:22px}
+  .plan h3{margin:0 0 6px}
+  .plan .amt{font-size:32px; font-weight:800}
+  .quote{background:var(--gray-100); border-radius:16px; padding:18px}
+  footer{background:#0f1320; color:#c8ccda; padding:28px 0; margin-top:40px}
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px}
+  .kpi{background:#ffffff; border:1px solid #e7e9ee; border-radius:14px; padding:16px; text-align:center}
+  .kpi .big{font-size:24px; font-weight:800; color:var(--blue-mid)}
+  .subtle{background:#F7FAFF;border-top:1px solid #e7e9ee;border-bottom:1px solid #e7e9ee;}
+  @media (max-width: 900px){ .grid, .split, .price, .kpis{grid-template-columns:1fr} .nav .hide-sm{display:none} }
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="dot">C</div>
+      <div>MJB <span style="font-weight:400">Connect</span></div>
+    </div>
+    <nav class="hide-sm">
+      <a href="#how">How it works</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#post">Post a Job</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div>
+      <a class="btn secondary" href="#pricing">Pricing</a>
+      <a class="btn primary" href="#post">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Find the Right Staff. Fast.</h1>
+    <p>Hire qualified workers or get hired for jobs in minutes. Launching with caregiving, hospitality, and local gigs — expanding to every industry.</p>
+    <div class="cta">
+      <a class="btn green" href="#post">I'm Hiring</a>
+      <a class="btn secondary" style="background:#ffffff; color:#1b2a44" href="#jobs">I'm Looking for Work</a>
+    </div>
+    <div class="badges">
+      <div class="badge">Safe & Verified</div>
+      <div class="badge">Fast Matching</div>
+      <div class="badge">No long contracts</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="jobs">
+  <div class="container">
+    <h2>Jobs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Home Care Aide (Evenings)</h3>
+        <p class="muted">Caring Hands Agency · Patchogue, NY · Part-time</p>
+        <a class="btn primary" href="#post">Apply</a>
+      </div>
+      <div class="card">
+        <h3>Event Server – Weekend Shift</h3>
+        <p class="muted">Harborview Events · Port Jefferson, NY · One-time gig</p>
+        <a class="btn primary" href="#post">Apply</a>
+      </div>
+      <div class="card">
+        <h3>Line Cook (Lunch)</h3>
+        <p class="muted">Seaside Bistro · Long Island, NY · Full-time</p>
+        <a class="btn primary" href="#post">Apply</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="post">
+  <div class="container panel">
+    <h2>Post a Job</h2>
+    <form action="mailto:hello@joinmjbconnect.com" method="post" enctype="text/plain">
+      <label>Job Title<br/><input required placeholder="e.g., Home Care Aide" style="width:100%;padding:12px;border-radius:8px;border:1px solid #d5d9e4"></label>
+      <label>Category<br/><select style="width:100%;padding:12px;border-radius:8px;border:1px solid #d5d9e4">
+        <option>Caregiving</option><option>Food & Hospitality</option><option>General Gig</option>
+      </select></label>
+      <label>Pay<br/><input placeholder="$/hr or flat rate" style="width:100%;padding:12px;border-radius:8px;border:1px solid #d5d9e4"></label>
+      <label>Location<br/><input placeholder="City, State or Zip" style="width:100%;padding:12px;border-radius:8px;border:1px solid #d5d9e4"></label>
+      <label>Description<br/><textarea rows="5" style="width:100%;padding:12px;border-radius:8px;border:1px solid #d5d9e4"></textarea></label>
+      <div style="margin-top:12px"><button class="btn green" type="submit">Publish Job – $25</button></div>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <h2>Pricing</h2>
+    <div class="price">
+      <div class="plan"><h3>Single Post</h3><div class="amt">$25</div></div>
+      <div class="plan"><h3>Business</h3><div class="amt">$200/mo</div></div>
+      <div class="plan"><h3>Worker Boost</h3><div class="amt">$10/mo</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="privacy">
+  <div class="container"><h2>Privacy Policy</h2><p>We respect your privacy. Data is only used to run the service. Payments are handled by Stripe securely.</p></div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container"><h2>Contact</h2><p>Email us: hello@joinmjbconnect.com</p></div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;">
+    <div><strong>MJB Connect</strong> — © <span id="y"></span></div>
+    <div><a style="color:#c8ccda" href="#privacy">Privacy</a> · <a style="color:#c8ccda" href="#contact">Contact</a></div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
